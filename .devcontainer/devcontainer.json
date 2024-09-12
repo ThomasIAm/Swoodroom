@@ -12,7 +12,7 @@
     "vscode": {
       "extensions": ["bradlc.vscode-tailwindcss", "esbenp.prettier-vscode"]
     }
-  }
+  },
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -21,7 +21,11 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "yarn install",
+  // "postCreateCommand": "",
+
+  "postStartCommand": "yarn install && npm run app",
+
+  "postAttachCommand": "npm run dev",
 
   // Configure tool-specific properties.
   // "customizations": {},

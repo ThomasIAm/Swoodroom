@@ -10,16 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <!-- END TODO -->
-    <!-- START PROD ONLY -->
     <link rel="stylesheet" href="./output.css" />
-    <!-- END PROD ONLY -->
-    <!-- START DEV ONLY -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    /> -->
-    <!-- END DEV ONLY -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Swoodroom</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
@@ -53,6 +44,7 @@
   </head>
   <body>
     <main>
+      <!-- Hero with logo and text in two columns -->
       <div
         class="hero min-h-[500px]"
         style="background-image: url(./assets/img/background.png)"
@@ -87,6 +79,139 @@
           </div>
         </div>
       </div>
+
+      <!-- Gallery with portfolio logos -->
+      <div class="container mx-auto py-8">
+        <h1 class="mb-5 text-center text-3xl font-bold">Portfolio</h1>
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+          <img
+            src="./assets/img/portfolio/cundy.png"
+            alt="Cundy logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/little window.png"
+            alt="Little Window logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/leeefs.png"
+            alt="Leeefs logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/ordy.png"
+            alt="Ordy logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/youbrunch.png"
+            alt="Youbrunch logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/sukis creations.png"
+            alt="Suki's Creations logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/ocean builds.png"
+            alt="Ocean Builds logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/dirkx mineralen.png"
+            alt="Dirkx Mineralen logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/glowease.png"
+            alt="GlowEase logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/kleur in je hart.png"
+            alt="Kleur in je Hart logo"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+        </div>
+      </div>
+
+      <!-- Gallery with portfolio graphics -->
+      <div class="container mx-auto py-8">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+          <img
+            src="./assets/img/portfolio/ordy-poster.png"
+            alt="Ordy infographic"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/postkantoor.png"
+            alt="B&B Het Oude Postkantoor brochure"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+          <img
+            src="./assets/img/portfolio/youbrunch-menu.png"
+            alt="Youbrunch menukaart"
+            class="w-full cursor-pointer object-cover"
+            onclick="expandImage(this)"
+          />
+        </div>
+      </div>
+
+      <!-- Gallery modal -->
+      <div
+        id="modal"
+        class="fixed inset-0 flex hidden items-center justify-center bg-black bg-opacity-75"
+      >
+        <img id="modal-img" class="max-h-full max-w-full" />
+        <button
+          class="btn btn-circle absolute right-4 top-4"
+          onclick="closeModal()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Gallery modal script -->
+      <script>
+        function expandImage(img) {
+          const modal = document.getElementById("modal");
+          const modalImg = document.getElementById("modal-img");
+          modalImg.src = img.src;
+          modal.classList.remove("hidden");
+        }
+
+        function closeModal() {
+          const modal = document.getElementById("modal");
+          modal.classList.add("hidden");
+        }
+      </script>
     </main>
   </body>
 </html>
