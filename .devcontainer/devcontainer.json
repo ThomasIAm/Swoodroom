@@ -23,9 +23,9 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "",
 
-  "postStartCommand": "yarn install && npm run app",
+  "postStartCommand": "yarn install",
 
-  "postAttachCommand": "npm run dev",
+  "postAttachCommand": "npm run app"
 
   // Configure tool-specific properties.
   // "customizations": {},

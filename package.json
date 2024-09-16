@@ -7,7 +7,7 @@
   },
   "scripts": {
     "app": "lite-server",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
     "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   }
 }
