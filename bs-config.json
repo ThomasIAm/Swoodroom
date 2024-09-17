@@ -1,10 +1,13 @@
 {
-  "injectChanges": false,
-  "files": [
-    ". /**/*.{html,htm,css,js}"
-  ],
-  "watchOptions": {
-    "ignored": "node_modules"
+  "options": {
+    "proxy": "https://legendary-space-eureka-5g45g4q54whpxgq-3000.app.github.dev/",
+    "snippet": true,
+    "codeSync": true,
+    "injectChanges": true,
+    "files": [". /**/*.{html,htm,css,js}"],
+    "watchOptions": {
+      "ignored": "node_modules"
+    }
   },
   "server": {
     "baseDir": "./src"
