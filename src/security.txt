@@ -1,0 +1,5 @@
+Contact: mailto:info@swoodroom.nl
+Contact: mailto:security@tvdn.me
+Expires: 3000-12-31T11:59:00Z
+Canonical: https://swoodroom.nl/security.txt
+Preferred-Languages: nl, en
