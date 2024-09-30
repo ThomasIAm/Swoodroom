@@ -10,7 +10,10 @@
     }
   },
   "server": {
-    "baseDir": "./src"
+    "baseDir": "./src",
+    "serveStaticOptions": {
+      "extensions": ["html"]
+    }
   },
   "open": false
 }

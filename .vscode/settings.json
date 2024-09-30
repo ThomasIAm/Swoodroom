@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.language": "en,nl,nl-NL,en-GB,en-US,lorem"
+}
