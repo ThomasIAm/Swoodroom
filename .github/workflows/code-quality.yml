@@ -10,6 +10,7 @@ jobs:
     name: linting checks
     runs-on: ubuntu-latest
 
+    # checkov:skip=CKV2_GHA_1:not write-all
     permissions:
       contents: read
       packages: read
