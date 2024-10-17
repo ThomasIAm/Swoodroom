@@ -14,49 +14,46 @@
   <meta property="og:title" content="Swoodroom" />
   <meta property="og:url" content="https://www.swoodroom.nl" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="./assets/img/swoodroom_logo_white_23.png" />
+  <meta property="og:image" content="./assets/img/swoodroom_logo_white.png" />
   <meta property="og:image:width" content="1500" />
   <meta property="og:image:height" content="751" />
   <meta itemprop="name" content="Swoodroom" />
   <meta itemprop="url" content="https://www.swoodroom.nl" />
-  <meta itemprop="thumbnailUrl" content="./assets/img/swoodroom_logo_white_23.png" />
-  <link rel="image_src" href="./assets/img/swoodroom_logo_white_23.png" />
-  <meta itemprop="image" content="./assets/img/swoodroom_logo_white_23.png" />
+  <meta itemprop="thumbnailUrl" content="./assets/img/swoodroom_logo_white.png" />
+  <link rel="image_src" href="./assets/img/swoodroom_logo_white.png" />
+  <meta itemprop="image" content="./assets/img/swoodroom_logo_white.png" />
   <meta name="twitter:title" content="Swoodroom" />
-  <meta name="twitter:image" content="./assets/img/swoodroom_logo_white_23.png" />
+  <meta name="twitter:image" content="./assets/img/swoodroom_logo_white.png" />
   <meta name="twitter:url" content="https://www.swoodroom.nl" />
   <meta name="twitter:card" content="summary" />
   <meta name="description" content />
 </head>
 
-<body>
-  <main>
+<body class="flex flex-col min-h-screen">
+  <main class="flex-grow">
     <!-- Hero with logo and text in two columns -->
     <div class="hero lg:gap-10" style="background-image: url(./assets/img/background.png)">
       <div class="hero-content">
         <a href=".">
-          <img src="./assets/img/swoodroom_logo_white_23.png" class="max-h-24" />
+          <img src="./assets/img/swoodroom_logo_white.png" class="max-h-24" />
         </a>
       </div>
-      <div
-        class="hero-content row-start-2 flex-col text-center text-neutral-content sm:px-10 lg:flex-row lg:gap-10 lg:text-left">
-        <div class="mx-auto basis-2/5 justify-items-center self-start font-serif">
-          <h1 class="mb-5 text-4xl font-bold lg:text-5xl">
+      <div class="hero-content row-start-2 text-center text-neutral-content sm:px-10 lg:gap-10 max-w-3xl">
+        <div>
+          <h1 class="mb-5 text-4xl font-bold lg:text-5xl font-serif">
             Jij bent de
             <span class="text-secondary">spotlight</span> waard<span class="text-secondary">.</span>
           </h1>
-        </div>
-        <div class="basis-3/5 text-lg">
-          <p class="mb-5 lg:mb-10">
-            Met een kritische blik op design zorg ik ervoor dat bedrijven en
-            de reclame hiervoor er betrouwbaar en professioneel uit ziet. Ook
-            zorg ik ervoor dat het de aandacht van potentiële klanten trekt.
-            Door verder te denken over de gewenste uitstraling en doelgroep
-            ontwikkel ik de perfecte uiting voor het bedrijf of de dienst.
+          <p class="mb-5 lg:mb-10 text-lg">
+            Ben je klaar om jouw merk in de spotlight te zetten met sterke ontwerpen? Ik luister
+            naar jouw wensen en ideeën. Ook denk ik graag met je mee om tot het beste resultaat
+            te komen dat perfect aansluit bij jouw visie en doelen.
           </p>
-          <p class="mb-5 lg:mb-10">Benieuwd wat ik voor jou kan betekenen?</p>
-          <button class="btn btn-secondary mb-5 lg:mb-10">
-            <a href="#diensten">Klik hier!</a>
+          <button class="btn btn-accent mb-5 lg:mb-10">
+            <a href="#diensten">Diensten</a>
+          </button>
+          <button class="btn btn-secondary mb-5 lg:mb-10" onclick="openContact()">
+            Contact
           </button>
         </div>
       </div>
@@ -126,59 +123,94 @@
       }
     </script>
 
-    <!-- Hero with services in three columns -->
-    <div class="hero bg-primary xl:py-52" style="background-image: url(./assets/img/background.png)" id="diensten">
-      <div class="hero-content flex-col gap-x-52 text-neutral-content xl:flex-row">
+    <!-- Hero with services in four columns -->
+    <div class="hero bg-primary py-16 md:py-52" style="background-image: url(./assets/img/background.png)"
+      id="diensten">
+      <div class="hero-content text-neutral-content grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
         <!-- Logo + huisstijl -->
-        <div class="basis-1/3">
-          <div class="card max-w-96">
-            <div class="card-body items-center text-center">
-              <h2 class="card-title text-5xl font-bold text-secondary">
-                Logo <span class="text-neutral-content">+</span>
-              </h2>
-              <h2 class="card-title text-5xl font-bold">huisstijl</h2>
-              <p>Vanaf €280,- excl. BTW</p>
-              <div class="card-actions justify-end">
+        <div class="card bg-base-300 font-bold">
+          <figure class="px-10 pt-10">
+            <img src="./assets/img/services_icon.svg" class="rounded-xl max-h-28" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-5xl font-bold text-secondary">
+              Logo <span class="text-neutral-content">+</span>
+            </h2>
+            <h2 class="card-title text-5xl font-bold">huisstijl</h2>
+            <p>Vanaf €280,- excl. BTW</p>
+            <div class="card-actions justify-end">
+              <a href="./logo-huisstijl">
                 <button class="btn btn-secondary my-3">
-                  <a href="./logo-huisstijl">Meer info</a>
+                  Meer info
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Drukwerk -->
-        <div class="basis-1/3">
-          <div class="card max-w-96">
-            <div class="card-body items-center text-center">
-              <h2 class="card-title text-5xl font-bold text-secondary">
-                Drukwerk
-              </h2>
-              <h2 class="card-title text-5xl font-bold">ontwerp</h2>
-              <p>Vanaf €60,- excl. BTW</p>
-              <div class="card-actions justify-end">
+        <div class="card bg-base-300 font-bold">
+          <figure class="px-10 pt-10">
+            <img src="./assets/img/services_icon.svg" class="rounded-xl max-h-28" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-5xl font-bold text-secondary">
+              Drukwerk
+            </h2>
+            <h2 class="card-title text-5xl font-bold">ontwerp</h2>
+            <p>Vanaf €60,- excl. BTW</p>
+            <div class="card-actions justify-end">
+              <a href="./drukwerk-ontwerp">
                 <button class="btn btn-secondary my-3">
-                  <a href="./drukwerk-ontwerp">Meer info</a>
+                  Meer info
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Social media -->
-        <div class="basis-1/3">
-          <div class="card max-w-96">
-            <div class="card-body items-center text-center">
-              <h2 class="card-title text-5xl font-bold text-secondary">
-                Social
-              </h2>
-              <h2 class="card-title text-5xl font-bold">media</h2>
-              <p>Vanaf €40,- excl. BTW</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-secondary my-3" onclick="openContact(this)" name="Social media">
-                  Neem contact op
+        <div class="card font-bold bg-base-300">
+          <figure class="px-10 pt-10">
+            <img src="./assets/img/services_icon.svg" class="rounded-xl max-h-28" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-5xl font-bold text-secondary">
+              Social
+            </h2>
+            <h2 class="card-title text-5xl font-bold">media</h2>
+            <p>Vanaf €40,- excl. BTW</p>
+            <div class="card-actions justify-end">
+              <a href="./social-media">
+                <button class="btn btn-secondary my-3">
+                  Meer info
                 </button>
-              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illustratie -->
+        <div class="card bg-base-300 font-bold">
+          <figure class="px-10 pt-10">
+            <img src="./assets/img/services_icon.svg" class="rounded-xl max-h-28" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-5xl font-bold min-h-[6.5rem]">Illustratie</h2>
+            <p class="invisible">Placeholder</p>
+            <div class="card-actions justify-end">
+              <a href="https://swoodroom.art" rel="noopener noreferrer" target="_blank">
+                <button class="btn btn-secondary my-3">
+                  Meer info
+                  <svg class="h-4 w-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                    <line x1="10" y1="14" x2="20" y2="4" />
+                    <polyline points="15 4 20 4 20 9" />
+                  </svg>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -216,7 +248,9 @@
           <option>Overig drukwerk</option>
 
           <option disabled>--- Social media ---</option>
-          <option>Social media</option>
+          <option>Template ontwerp</option>
+          <option>Post/story ontwerp</option>
+          <option>Overig social media</option>
         </select>
 
         <!-- Name -->
@@ -271,16 +305,18 @@
 
     <!-- Contact modal script -->
     <script>
-      function openContact(package) {
+      function openContact(package = null) {
         const contactModal = document.getElementById("contact-modal");
         const contactPackage = document.getElementById(
           "contact-modal-package",
         );
         const contactMessage = document.getElementById("contact-modal-message");
         const contactSubject = document.getElementById("contact-modal-subject");
-        contactPackage.value = package.name;
-        contactMessage.value = lookupMessage(package.name);
-        contactSubject.value = "Aanvraag " + package.name
+        if (package) {
+          contactPackage.value = package.name;
+          contactMessage.value = lookupMessage(package.name);
+          contactSubject.value = "Aanvraag " + package.name
+        }
         contactModal.classList.remove("hidden");
       }
 
@@ -365,26 +401,25 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer footer-center mt-5 p-10">
-      <aside>
-        <p class="mb-5 text-4xl font-bold">Swoodroom</p>
-        <p class="text-lg">
-          <a href="mailto:info@swoodroom.nl">info@swoodroom.nl</a>
-        </p>
-        <p class="text-lg"><a href="tel:+31610773712">06 10 77 37 12</a></p>
-        <p class="text-lg">KvK: 81637691</p>
-        <p class="text-lg">
-          Copyright ©
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          - Alle rechten voorbehouden
-        </p>
-      </aside>
-    </footer>
   </main>
+
+  <footer class="footer footer-center mt-5 p-10">
+    <aside>
+      <p class="mb-5 text-4xl font-bold">Swoodroom</p>
+      <p class="text-lg">
+        <a href="mailto:info@swoodroom.nl">info@swoodroom.nl</a>
+      </p>
+      <p class="text-lg"><a href="tel:+31610773712">06 10 77 37 12</a></p>
+      <p class="text-lg">KvK: 81637691</p>
+      <p class="text-lg">
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        - Alle rechten voorbehouden
+      </p>
+    </aside>
+  </footer>
 </body>
 
 </html>
