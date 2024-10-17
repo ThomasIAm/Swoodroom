@@ -7,24 +7,24 @@
   <link rel="shortcut icon" href="./assets/img/favicon.ico" />
   <link rel="stylesheet" href="./output.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Drukwerk ontwerp — Swoodroom</title>
+  <title>Social media — Swoodroom</title>
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-  <link rel="canonical" href="https://www.swoodroom.nl/logo-huisstijl" />
+  <link rel="canonical" href="https://www.swoodroom.nl/social-media" />
   <meta property="og:site_name" content="Swoodroom" />
-  <meta property="og:title" content="Drukwerk ontwerp — Swoodroom" />
-  <meta property="og:url" content="https://www.swoodroom.nl/drukwerk-ontwerp" />
+  <meta property="og:title" content="Social media — Swoodroom" />
+  <meta property="og:url" content="https://www.swoodroom.nl/social-media" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./assets/img/swoodroom_logo_white.png" />
   <meta property="og:image:width" content="1500" />
   <meta property="og:image:height" content="751" />
-  <meta itemprop="name" content="Drukwerk ontwerp — Swoodroom" />
-  <meta itemprop="url" content="https://www.swoodroom.nl/drukwerk-ontwerp" />
+  <meta itemprop="name" content="Social media — Swoodroom" />
+  <meta itemprop="url" content="https://www.swoodroom.nl/social-media" />
   <meta itemprop="thumbnailUrl" content="./assets/img/swoodroom_logo_white.png" />
   <link rel="image_src" href="./assets/img/swoodroom_logo_white.png" />
   <meta itemprop="image" content="./assets/img/swoodroom_logo_white.png" />
-  <meta name="twitter:title" content="Drukwerk ontwerp — Swoodroom" />
+  <meta name="twitter:title" content="Social media — Swoodroom" />
   <meta name="twitter:image" content="./assets/img/swoodroom_logo_white.png" />
-  <meta name="twitter:url" content="https://www.swoodroom.nl/drukwerk-ontwerp" />
+  <meta name="twitter:url" content="https://www.swoodroom.nl/social-media" />
   <meta name="twitter:card" content="summary" />
   <meta name="description" content />
 </head>
@@ -48,22 +48,21 @@
 
       <!-- Packages in three columns -->
       <div class="hero-content row-start-3 text-neutral-content grid grid-cols-1 lg:grid-cols-3 gap-10 pb-10">
-        <!-- Flyer / poster - enkelzijdig -->
+        <!-- Template ontwerp -->
         <div class="max-w-72">
           <div class="card bg-base-300">
             <div class="card-body items-center text-center">
               <h2 class="card-title mb-5 text-4xl font-bold">
-                Flyer of poster
+                Template ontwerp
               </h2>
-              <h3 class="card-title mb-5 font-bold">Enkelzijdig</h3>
+              <h3 class="card-title mb-5 font-bold">Post/story template</h3>
               <div class="bg-base-200 rounded-2xl font-bold px-5 py-2 min-w-[10.5rem]">
                 <p>vanaf</p>
-                <p class="text-5xl">€100</p>
+                <p class="text-5xl">€80</p>
                 <p>excl. BTW</p>
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-secondary my-5 font-bold" onclick="openContact(this)"
-                  name="Flyer / poster - enkelzijdig">
+                <button class="btn btn-secondary my-5 font-bold" onclick="openContact(this)" name="Template ontwerp">
                   Pakket aanvragen
                 </button>
               </div>
@@ -71,22 +70,21 @@
           </div>
         </div>
 
-        <!-- Flyer / poster - meerzijdig -->
+        <!-- Post/story ontwerp -->
         <div class="max-w-72">
           <div class="card bg-base-300">
             <div class="card-body items-center text-center">
               <h2 class="card-title mb-5 text-4xl font-bold">
-                Flyer of poster
+                Post/story ontwerp
               </h2>
-              <h3 class="card-title mb-5 font-bold">Meerzijdig</h3>
+              <h3 class="card-title mb-5 font-bold">Vanaf 1 post</h3>
               <div class="bg-base-200 rounded-2xl font-bold px-5 py-2 min-w-[10.5rem]">
                 <p>vanaf</p>
-                <p class="text-5xl">€150</p>
+                <p class="text-5xl">€30</p>
                 <p>excl. BTW</p>
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-secondary my-5 font-bold" onclick="openContact(this)"
-                  name="Flyer / poster - meerzijdig">
+                <button class="btn btn-secondary my-5 font-bold" onclick="openContact(this)" name="Post/story ontwerp">
                   Pakket aanvragen
                 </button>
               </div>
@@ -94,19 +92,19 @@
           </div>
         </div>
 
-        <!-- Overig drukwerk -->
+        <!-- Overig social media -->
         <div class="max-w-72">
           <div class="card bg-base-300">
             <div class="card-body items-center text-center">
               <h2 class="card-title mb-5 text-4xl font-bold">
-                Overig drukwerk
+                Overig social media
               </h2>
-              <h3 class="card-title mb-5 invisible">Placeholder</h3>
+              <h3 class="card-title mb-5 font-bold">Op maat</h3>
               <div class="bg-base-200 rounded-2xl font-bold px-5 py-2 min-w-[10.5rem]">
                 <p class="my-9">Prijs op aanvraag</p>
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-secondary my-5 font-bold" onclick="openContact(this)" name="Overig drukwerk">
+                <button class="btn btn-secondary my-5 font-bold" onclick="openContact(this)" name="Overig social media">
                   Pakket aanvragen
                 </button>
               </div>
@@ -225,14 +223,14 @@
       function lookupMessage(packageName) {
         let contactMessage = "Graag ontvang ik informatie over het laten";
         switch (packageName) {
-          case "Flyer / poster - enkelzijdig":
-            contactMessage = contactMessage + " ontwerpen van een flyer / poster.";
+          case "Template ontwerp":
+            contactMessage = contactMessage + " ontwerpen van een social media template.";
             break;
-          case "Flyer / poster - meerzijdig":
-            contactMessage = contactMessage + " ontwerpen van een flyer / poster.";
+          case "Post/story ontwerp":
+            contactMessage = contactMessage + " ontwerpen van een social media post/story.";
             break;
-          case "Overig drukwerk":
-            contactMessage = contactMessage + " ontwerpen van drukwerk.";
+          case "Overig social media":
+            contactMessage = contactMessage + " ontwerpen van social media.";
             break;
           default:
             break;

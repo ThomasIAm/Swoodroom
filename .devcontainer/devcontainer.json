@@ -11,14 +11,15 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "streetsidesoftware.code-spell-checker",
         "bradlc.vscode-tailwindcss",
         "esbenp.prettier-vscode",
         "eamodio.gitlens",
-        "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-dutch",
         "GitHub.remotehub",
         "SimonSiefke.svg-preview",
-        "GitHub.vscode-codeql"
+        "GitHub.vscode-codeql",
+        "streetsidesoftware.code-spell-checker-dutch",
+        "chinchiheather.vscode-margin-colours"
       ]
     }
   },
