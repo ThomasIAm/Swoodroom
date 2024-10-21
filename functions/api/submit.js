@@ -17,25 +17,27 @@ export async function onRequestPost(context) {
       }
     }
 
-    const reqBody = {
-      personalizations: [{
-          to: [{
-            email: "info@swoodroom.nl",
-          }],
-      }],
-      from: {
-        email: "aanvraag@swoodroom.nl",
-      },
-      subject: output.subject,
-      // subject: "test",
-      content: [{
-        type: "text/plain",
-        value: `email: ${output.email}\nname: ${output.name}\npackage: ${output.package}\nmessage:\n${output.message}`
-        // value: "test",
-      }],
-    };
+    const reqBodySwoodroom = composeRequestBody(
+      "info@swoodroom.nl",
+      "aanvraag@swoodroom.nl",
+      output.subject,
+      output.name,
+      output.package,
+      output.message,
+    );
 
-    await sendMail(context.env, reqBody);
+    const reqBodySender = composeRequestBody(
+      output.email,
+      "info@swoodroom.nl",
+      output.subject,
+      output.name,
+      output.package,
+      output.message,
+    );
+
+    await sendMail(context.env, reqBodySwoodroom);
+
+    await sendMail(context.env, reqBodySender);
 
     let pretty = JSON.stringify(output, null, 2);
     return new Response(pretty, {
@@ -48,25 +50,47 @@ export async function onRequestPost(context) {
   }
 }
 
+function composeRequestBody(to, from, sub, name, service, message) {
+  const body = {
+    personalizations: [
+      {
+        to: [
+          {
+            email: to,
+          },
+        ],
+        dynamic_template_data: {
+          subject: sub,
+          email: to,
+          first_name: name,
+          package: service,
+          message: message
+        },
+      },
+    ],
+    from: {
+      email: from,
+    },
+    template_id: "d-dab4e5a2d76f4c11aab8f71d5186e1a7",
+    asm: {
+      group_id: 27715
+    }
+  };
+
+  return body;
+}
+
 async function sendMail(env, body) {
   try {
-    const result = fetch(
-      "https://api.sendgrid.com/v3/mail/send",
-      {
-        method: "POST",
-        body: JSON.stringify(body),
-        headers: {
-          Authorization: `Bearer ${env.SENDGRID_API_KEY}`,
-          "Content-Type": "application/json"
-        }
-      }
-    );
+    const result = fetch("https://api.sendgrid.com/v3/mail/send", {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: {
+        Authorization: `Bearer ${env.SENDGRID_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+    });
     return result;
-    // return new Response(JSON.stringify(body), {
-    //   headers: {
-    //     "Content-Type": "application/json;charset=utf-8",
-    //   },
-    // });
   } catch (error) {
     return new Response("Error sending mail", { status: 400 });
   }
