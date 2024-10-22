@@ -17,24 +17,6 @@ export async function onRequestPost(context) {
       }
     }
 
-    const saveSwoodroom = await saveToDatabase(
-      "aanvraag@swoodroom.nl",
-      "info@swoodroom.nl",
-      output.subject,
-      output.name,
-      output.package,
-      output.message,
-    );
-
-    const saveSender = await saveToDatabase(
-      output.email,
-      "info@swoodroom.nl",
-      output.subject,
-      output.name,
-      output.package,
-      output.message,
-    );
-
     const reqBodySwoodroom = composeRequestBody(
       "info@swoodroom.nl",
       "aanvraag@swoodroom.nl",
@@ -65,20 +47,6 @@ export async function onRequestPost(context) {
     });
   } catch (err) {
     return new Response("Error parsing JSON content", { status: 400 });
-  }
-}
-
-async function saveToDatabase(from, to, sub, name, service, message) {
-  try {
-    const randomId = Math.floor(Math.random() * 999999);
-    const ps = await context.env.DB.prepare(
-      "INSERT INTO mails (id, 'from', 'to', sub, name, package, message) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
-    ).bind(randomId, from, to, sub, name, service, message);
-    const result = await ps.run();
-
-    return ps;
-  } catch (error) {
-    return new Response("Error saving to database", { status: 400 });
   }
 }
 
