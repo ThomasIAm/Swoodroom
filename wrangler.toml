@@ -17,3 +17,9 @@ compatibility_date = "2024-09-02"
 [env.production.vars]
 NODE_VERSION = "22"
 YARN_VERSION = "1"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "swoodroom-nl-mails"
+database_id = "a4088eec-12ab-4cf6-86ab-15500cabb053"
+preview_database_id = "DB"
