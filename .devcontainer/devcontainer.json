@@ -6,7 +6,8 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "features": {
     "ghcr.io/devcontainers-contrib/features/lite-server:1": {},
-    "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {}
+    "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {},
+    "ghcr.io/swift-server-community/swift-devcontainer-features/sqlite:1": {}
   },
   "customizations": {
     "vscode": {
@@ -19,7 +20,10 @@
         "SimonSiefke.svg-preview",
         "GitHub.vscode-codeql",
         "streetsidesoftware.code-spell-checker-dutch",
-        "chinchiheather.vscode-margin-colours"
+        "chinchiheather.vscode-margin-colours",
+        "github.vscode-github-actions",
+        "tamasfe.even-better-toml",
+        "qwtel.sqlite-viewer"
       ]
     }
   },
