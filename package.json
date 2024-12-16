@@ -9,7 +9,7 @@
   "scripts": {
     "app": "lite-server",
     "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "concurrently 'lite-server' 'npx tailwindcss -i ./src/input.css -o ./src/output.css --watch'",
     "pages": "npx wrangler pages dev"
   }
 }
